@@ -2,7 +2,7 @@
 
   <!-- Анимированный заголовок (Печатная машинка) -->
   <a href="https://github.com/Bagerca">
-    <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&weight=400&size=16&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Vibecoder;Лох в законе;JavaScript+%7C+HTML+%7C+CSS;%D0%94%D0%B5%D0%BB%D0%B0%D1%8E+%D0%B2%D0%B5%D0%B1-%D1%88%D1%82%D1%83%D0%BA%D0%B8" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&weight=400&size=16&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Vibecoder;Лох+в+законе;JavaScript+|+HTML+|+CSS;Горе-кодер;Making+web+stuff" alt="Typing SVG" />
   </a>
 
   <br/>
