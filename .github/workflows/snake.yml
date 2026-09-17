@@ -1,0 +1,40 @@
+name: Generate Snake Animation
+
+on:
+  # Запуск каждые 24 часа
+  schedule:
+    - cron: "0 0 * * *"
+  
+  # Позволяет запускать скрипт вручную
+  workflow_dispatch:
+
+  # Запускается при каждом пуше в main
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      # 1. Генерация SVG змейки (светлой и темной версии)
+      - name: Generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # 2. Пуш сгенерированных файлов в ветку 'output'
+      - name: Push snake svgs to output branch
+        uses: crazy-max/ghaction-github-pages@v3.5.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
