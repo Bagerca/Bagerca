@@ -30,9 +30,9 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # 2. Пуш сгенерированных файлов в ветку 'output'
+      # 2. Пуш сгенерированных файлов в ветку 'output' (Исправлена версия на v3.1.0)
       - name: Push snake svgs to output branch
-        uses: crazy-max/ghaction-github-pages@v3.5.0
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
